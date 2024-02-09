@@ -1,4 +1,4 @@
-import CountryDetail from "@/components/country/country-detail.component";
+import CountryDetail from "@/country/country-detail.component";
 import { getCountry } from "@/services/countries.services";
 
 type Params = {

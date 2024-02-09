@@ -19,3 +19,26 @@ John Alexander Toro Cortés
 ## Links
 
 Publish on [Vercel](https://bia.jatc.co)
+
+## Structure
+
+```code
+├── app/ # Pages
+    └── [cca3]
+      └── page.tsx
+    └── globals.css
+    └── layout.tsx
+    └── page.tsx 
+├── docs/ # Initial Information
+├── public # assets
+    └── assets
+├── src # Code
+    └── components
+      └── countries
+      └── country
+      └── footer
+      └── header
+      └── theme
+    └── services
+    └── types
+```

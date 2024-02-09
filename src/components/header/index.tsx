@@ -1,6 +1,6 @@
 import { SwitchTheme } from "@/theme/switch-theme.component";
 
-export const Header = () => {
+export default function Header() {
   return (
     <header>
       <nav className="navbar bg-base-300 shadow-lg px-12 justify-center">
@@ -17,4 +17,4 @@ export const Header = () => {
       </nav>
     </header>
   );
-};
+}

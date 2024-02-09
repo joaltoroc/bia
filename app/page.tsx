@@ -1,4 +1,4 @@
-import { CountryCard } from "@/components/country/country-card.component";
+import { CountryCard } from "@/country/country-card.component";
 import { CountriesFilter } from "@/countries/countries-filter.component";
 
 import { getCountries } from "@/services/countries.services";

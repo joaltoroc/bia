@@ -24,7 +24,9 @@
     "paths": {
       "@/*": [
         "./*",
-        "./components/*"
+        "./src/*",
+        "./src/components/*",
+        "./src/services/*"
       ]
     }
   },
