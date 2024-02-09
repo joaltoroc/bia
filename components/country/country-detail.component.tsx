@@ -61,7 +61,7 @@ export default function CountryDetail({ country }: Props) {
           alt={flags.alt}
           width={400}
           height={400}
-          className="w-full h-full"
+          className="w-full"
         />
         <div className="w-full text-base text-primary items-center">
           <h1 className="font-bold text-3xl py-6">{name}</h1>
