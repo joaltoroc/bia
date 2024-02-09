@@ -68,12 +68,14 @@ export const CountriesFilter = ({ regions }: Props) => {
       <div className="flex-none max-w-md sm:max-w-52 w-full mt-2 sm:mt-0">
         <select
           className="select bg-base-300 shadow-md w-full text-primary"
-          defaultValue={searchParams.get("region") || "-"}
+          defaultValue={searchParams.get("region")?.toLowerCase() || "-"}
           onClick={(event: Event) => updateQuery("region", event)}
         >
           <option value="-">Filter by Region</option>
           {regions.map((region) => (
-            <option key={region}>{region}</option>
+            <option key={region} value={region.toLowerCase()}>
+              {region}
+            </option>
           ))}
         </select>
       </div>

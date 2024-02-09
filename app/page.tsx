@@ -1,37 +1,14 @@
-import _uniq from "lodash/uniq";
-
+import { CountryCard } from "@/components/country/country-card.component";
 import { CountriesFilter } from "@/countries/countries-filter.component";
 
-import type { ICountry } from "@/types/country.types";
-import { CountryCard } from "@/components/country/country-card.component";
+import { getCountries } from "@/services/countries.services";
 
-type SearchParams = {
-  region?: string;
-  search?: string;
-};
+import type { ICountry, SearchParams } from "@/types";
 
 type Props = {
   params: object;
   searchParams: SearchParams;
 };
-
-async function getCountries({ region: regionFilter, search }: SearchParams) {
-  const res = await fetch(
-    "https://restcountries.com/v3.1/all?fields=name,flags,region,cca3,population,capital"
-  );
-  const data: ICountry[] = await res.json();
-
-  return {
-    countries: data.filter(
-      ({ region, name: { common } }) =>
-        region === (regionFilter || region) &&
-        common
-          .toLowerCase()
-          .includes(search?.toLowerCase() || common.toLowerCase())
-    ),
-    regions: _uniq<string>(data.map(({ region }) => region)).sort(),
-  };
-}
 
 export default async function Home({ searchParams }: Props) {
   const { countries, regions } = await getCountries(searchParams);

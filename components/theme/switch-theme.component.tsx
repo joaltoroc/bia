@@ -3,7 +3,7 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 export const SwitchTheme = () => {
   return (
-    <label className="cursor-pointer flex gap-2 text-primary">
+    <label className="cursor-pointer flex gap-2 text-primary items-center">
       <FontAwesomeIcon icon={faMoon} className="w-3" />
       <input
         type="checkbox"

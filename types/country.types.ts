@@ -3,8 +3,14 @@ export interface ICountry {
   name: Name;
   cca3: string;
   capital: string[];
+  tld: string[];
   region: string;
+  subregion: string;
   population: number;
+  currencies: Currency;
+  languages: Languages;
+  borders: string[];
+  bordersNames?: string[];
 }
 
 export interface Flags {
@@ -20,10 +26,23 @@ export interface Name {
 }
 
 export interface NativeName {
-  cat: Cat;
+  [key: string]: Native;
 }
 
-export interface Cat {
+export interface Native {
   official: string;
   common: string;
+}
+
+export interface Currency {
+  [key: string]: InfoCurrency;
+}
+
+export interface InfoCurrency {
+  name: string;
+  symbol: string;
+}
+
+export interface Languages {
+  [key: string]: string;
 }

@@ -13,6 +13,7 @@ const config: Config = {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
           primary: "#111517",
+          secondary: "#fafafa",
           "base-100": "#fafafa",
           "base-200": "#858585",
           "base-300": "#FFFFFF",
@@ -20,6 +21,7 @@ const config: Config = {
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
           primary: "#FFFFFF",
+          secondary: "#2b3945",
           "base-100": "#202c37",
           "base-300": "#2b3945",
         },

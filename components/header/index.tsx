@@ -6,7 +6,7 @@ export const Header = () => {
       <nav className="navbar bg-base-300 shadow-lg px-12 justify-center">
         <div className="max-w-screen-lg w-full">
           <div className="flex-1">
-            <h1 className="text-2xl sm:text-3xl font-bold text-primary">
+            <h1 className="text-lg sm:text-3xl font-bold text-primary">
               Where in the world?
             </h1>
           </div>
