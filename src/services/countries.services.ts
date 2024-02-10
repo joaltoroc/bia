@@ -29,7 +29,7 @@ export async function getCountries({
 }
 
 export async function getBorderCountries(country: ICountry) {
-  if (!country.borders.length) {
+  if (!country.borders || !country.borders.length) {
     return [];
   }
 

@@ -6,12 +6,14 @@ import { getCountries } from "@/services/countries.services";
 import type { ICountry, SearchParams } from "@/types";
 
 type Props = {
-  params: object;
-  searchParams: SearchParams;
+  params?: object;
+  searchParams?: SearchParams;
 };
 
 export default async function Home({ searchParams }: Props) {
-  const { countries, regions } = await getCountries(searchParams);
+  const { countries, regions } = await getCountries(
+    searchParams as SearchParams
+  );
 
   return (
     <div className="p-12 flex flex-col">
